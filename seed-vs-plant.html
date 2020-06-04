@@ -2,8 +2,20 @@
 <html>
    <head>
       <title>Plant Vs Seed</title>
+	   
+<script>
+function clicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nuggetcount/3ea9071a-8f45-452f-ab69-f066f7622fe4");
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        //alert(`This button has been clicked ${this.response.value} times!`);
+    }
+    xhr.send();
+}
+</script>
    </head>
-   <body>
+   <body onload="clicked()">
 	   <p>
 	    	   <b><a href="https://www.youtube.com/watch?v=Jmd1QC_dv3I&feature=emb_title">John Deere: Air Seeding (1:41 Mins)</b></a><br><br>
 	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/Jmd1QC_dv3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
