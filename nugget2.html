@@ -9,6 +9,16 @@ function clicked() {
     xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/107c66a5-a3be-4f2a-8cd7-23376b0d9a76");
     xhr.responseType = "json";
     xhr.send();
+	
+    if (typeof(Storage) !== "undefined") {
+	if(localStorage.getItem("cnt") === null) {
+	   localStorage.setItem("cnt", 1);
+	   var xhr2 = new XMLHttpRequest();
+	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
+	   xhr2.responseType = "json";
+	   xhr2.send();
+	}
+    }
 }
 
 function quizClicked() {
@@ -16,16 +26,6 @@ function quizClicked() {
     xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/quiz");
     xhr.responseType = "json";
     xhr.send();
-	
-   if (typeof(Storage) !== "undefined") {
-  	if(localStorage.getItem("cnt") === null) {
-   	   localStorage.setItem("cnt", 1);
- 	   var xhr2 = new XMLHttpRequest();
-    	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
-    	   xhr2.responseType = "json";
-    	   xhr2.send();
-	}
-   }
 }
 	
 </script>
