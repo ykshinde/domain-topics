@@ -16,13 +16,23 @@ function quizClicked() {
     xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/quiz");
     xhr.responseType = "json";
     xhr.send();
+	
+   if (typeof(Storage) !== "undefined") {
+  	if(localStorage.getItem("cnt") === null) {
+   	   localStorage.setItem("cnt", 1);
+ 	   var xhr2 = new XMLHttpRequest();
+    	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
+    	   xhr2.responseType = "json";
+    	   xhr2.send();
+	}
+   }
 }
 	
 </script>
    </head>
    <body onload="clicked()">
 	   <p>
-	    	   <b><a href="https://www.youtube.com/watch?v=Jmd1QC_dv3I&feature=emb_title">John Deere Planters (3:51 Mins)</b></a><br><br>
+	    	   <b><a href="https://www.youtube.com/watch?v=7d7HQeAax_s&feature=emb_title">John Deere Planters (3:51 Mins)</b></a><br><br>
 	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/7d7HQeAax_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	  </p>
 	  
