@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>John Deere Planters</title>
+	   
+<script>
+function clicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/107c66a5-a3be-4f2a-8cd7-23376b0d9a76");
+    xhr.responseType = "json";
+    xhr.send();
+	
+    if (typeof(Storage) !== "undefined") {
+	if(localStorage.getItem("cnt") === null) {
+	   localStorage.setItem("cnt", 1);
+	   var xhr2 = new XMLHttpRequest();
+	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
+	   xhr2.responseType = "json";
+	   xhr2.send();
+	}
+    }
+}
+
+function quizClicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/quiz");
+    xhr.responseType = "json";
+    xhr.send();
+}
+	
+</script>
+   </head>
+   <body onload="clicked()">
+	   <p>
+	    	   <b><a href="https://www.youtube.com/watch?v=7d7HQeAax_s&feature=emb_title">John Deere Planters (3:51 Mins)</b></a><br><br>
+	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/7d7HQeAax_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </p>
+	  
+	  <p>
+	   	  <iframe width="640px" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=IjewOTa4akmF7IUPCVfKawrO7pbmfkxMkgwj-eMts9hUNEk0UUJRSDBRUkpJWE04ODZRR0NKUzhaWS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+	  </p>
+    
+   </body>
+</html>
