@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>John Deere Planters</title>
+	   
+<script>
+function clicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/107c66a5-a3be-4f2a-8cd7-23376b0d9a76");
+    xhr.responseType = "json";
+    xhr.send();
+	
+    if (typeof(Storage) !== "undefined") {
+	if(localStorage.getItem("cnt") === null) {
+	   localStorage.setItem("cnt", 1);
+	   var xhr2 = new XMLHttpRequest();
+	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
+	   xhr2.responseType = "json";
+	   xhr2.send();
+	}
+    }
+}
+
+function quizClicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/quiz");
+    xhr.responseType = "json";
+    xhr.send();
+}
+	
+</script>
+   </head>
+   <body onload="clicked()">
+	   <p>
+	    	   <b><a href="https://www.youtube.com/watch?v=XebeXoHOI_0">John Deere ExactEmerge™ Virtual Tour</b></a><br><br>
+	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/XebeXoHOI_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </p>
+	  
+	  <p>
+	   	  <h1><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=IjewOTa4akmF7IUPCVfKawrO7pbmfkxMkgwj-eMts9hUMUlGMFM3Rjg5STIwOUg1U0laTUU3VEVBWi4u" onclick="quizClicked()">Quick 5 questions knowledge check</a></h1>
+	  </p>
+	  
+   </body>
+   
+   
+</html>
