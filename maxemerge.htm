@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>John Deere Planters</title>
+	   
+<script>
+function clicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget3/b111ee58-1a9d-4963-918f-19e23aec954f");
+    xhr.responseType = "json";
+    xhr.send();
+	
+    if (typeof(Storage) !== "undefined") {
+	if(localStorage.getItem("cnt") === null) {
+	   localStorage.setItem("cnt", 1);
+	   var xhr2 = new XMLHttpRequest();
+	   xhr2.open("GET", "https://api.countapi.xyz/hit/nugget2/uniquecnt");
+	   xhr2.responseType = "json";
+	   xhr2.send();
+	}
+    }
+}
+
+function quizClicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/nugget2/quiz");
+    xhr.responseType = "json";
+    xhr.send();
+}
+	
+</script>
+   </head>
+   <body onload="clicked()">
+	   <p>
+	    	   <b><a href="https://www.youtube.com/watch?v=eaE5Powwzz4">MaxEmerge(TM) 5e - Electric Drive Row Unit</b></a><br><br>
+	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/eaE5Powwzz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		   <br><br>
+       
+       <b><a href="https://www.youtube.com/watch?v=IP7DJexjffU">Individual Row Hydraulic Downforce (IRHD)</b></a><br><br>
+	    	   <iframe width="560" height="315" src="https://www.youtube.com/embed/IP7DJexjffU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		   <br><br>
+       
+		   <h3><a href="https://www.flowdock.com/rest/files/301287/XZewxESHFw9d91_DZa28IQ/MaxEmerge.pdf">MaxEmerge™ Row Unit Doc</a><h3>
+		   <br>
+		   
+	  </p>
+	  
+	  <p>
+	   	  <h1><a href="https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DIjewOTa4akmF7IUPCVfKawrO7pbmfkxMkgwj-eMts9hUQUNVMVhTUTc2S0o2MlFCSFRMRTAzRTgxNC4u%26Token%3D39cb0e55a31f4ad0afc43d6b60978188" onclick="quizClicked()">Quick 5 questions knowledge check</a></h1>
+	  </p>
+	  
+   </body>
+   
+   
+</html>
